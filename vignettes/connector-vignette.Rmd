@@ -1,0 +1,60 @@
+---
+title: "connector.logger"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`connector.logger` is a package that provides a set of functions **to connect to data source** and read and write data from it. 
+
+## Introduction
+
+This vignette demonstrates how to use the `connector.logger` package to connect to 
+data source and access different types of data.
+
+First let's load all the packages we're going to use in this vignette:
+```{r eval=FALSE}
+library(connector.logger)
+```
+
+## Connect to data source
+
+When we want to connect to data source we can use...
+
+```{r eval=FALSE}  
+# Load data connection
+con <- ...
+```
+
+After the setup is done we can use these connection to read and write data from
+data source.
+
+## Reading and writing data
+
+The `connector.logger` package provides a set of functions to read and write data
+from the data source. 
+
+Here is an example of reading and writing data:
+
+```{r eval=FALSE}
+# Read data
+con$read_cnt()
+
+# Write data
+con$write_cnt()
+
+```
+
+## Conclusion
+
+In this vignette we showed how to connect to data source, read and write
+data from it.

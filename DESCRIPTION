@@ -12,5 +12,8 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-URL: https://github.com/NN-OpenSource/connector.logger
+URL: https://github.com/NN-OpenSource/connector.logger, https://miniature-couscous-2kqngew.pages.github.io/
 BugReports: https://github.com/NN-OpenSource/connector.logger/issues
+Imports: 
+    connector,
+    lifecycle

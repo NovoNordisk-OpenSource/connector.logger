@@ -6,3 +6,8 @@
 ^dev/01_start\.R$
 ^dev/02_dev\.R$
 ^\.github$
+^codecov\.yml$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^vignettes/connector-vignette\.Rmd$
