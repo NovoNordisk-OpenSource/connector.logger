@@ -56,6 +56,7 @@ log_remove_connector <- function(connector_object, name, ...) {
 
 #' @title Default log remove operation
 #' @description Default log remove operation
+#' @export
 log_remove_connector.default <- function(connector_object, name, ...) {
   whirl::log_delete(name)
 }
@@ -168,10 +169,28 @@ log_remove_connector.ConnectorDatabricksVolume <- function(connector_object, nam
   whirl::log_delete(msg)
 }
 
-# connector
-# fs
-# sharepoint
-# databricks_dbi
-# ConnectorDatabricksVolume
-# connector_dbi
+#' @title Log read operation for connector dbi
+#' @description Log read operation for connector dbi
+#' @export
+log_read_connector.connector_dbi <- function(connector_object, name, ...) {
+  msg <- paste0("dbname :", connector_object$conn@dbname, " , name:", name)
+  whirl::log_read(msg)
+}
+
+#' @title Log write operation for connector dbi
+#' @description Log write operation for connector dbi
+#' @export
+log_write_connector.connector_dbi <- function(connector_object, name, ...) {
+  msg <- paste0("dbname :", connector_object$conn@dbname, " , name:", name)
+  whirl::log_write(msg)
+}
+
+#' @title Log remove operation for connector dbi
+#' @description Log remove operation for connector dbi
+#' @export
+log_remove_connector.connector_dbi <- function(connector_object, name, ...) {
+  msg <- paste0("dbname :", connector_object$conn@dbname, " , name:", name)
+  whirl::log_delete(msg)
+}
+
 
