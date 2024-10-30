@@ -17,4 +17,5 @@ BugReports: https://github.com/NN-OpenSource/connector.logger/issues
 Imports: 
     connector,
     lifecycle,
+    methods,
     whirl
