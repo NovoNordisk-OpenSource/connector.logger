@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_read_connector.connector_dbi}
 \alias{log_read_connector.connector_dbi}
-\title{Log read operation for connector dbi}
+\title{Log Read Operation for connector dbi}
 \usage{
 \method{log_read_connector}{connector_dbi}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The connector_dbi object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Log read operation for connector dbi
+Implementation of the log_read_connector function for the connector_dbi class.
 }

@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_read_connector.connector_fs}
 \alias{log_read_connector.connector_fs}
-\title{Log read operation for FS connector}
+\title{Log Read Operation for FS connector}
 \usage{
 \method{log_read_connector}{connector_fs}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The connector_fs object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Log read operation for FS connector
+Implementation of the log_read_connector function for the connector_fs class.
 }

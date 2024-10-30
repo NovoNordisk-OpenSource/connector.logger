@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_write_connector.connector_dbi}
 \alias{log_write_connector.connector_dbi}
-\title{Log write operation for connector dbi}
+\title{Log Write Operation for connector dbi}
 \usage{
 \method{log_write_connector}{connector_dbi}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The connector_dbi object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Log write operation for connector dbi
+Implementation of the log_write_connector function for the connector_dbi class.
 }

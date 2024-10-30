@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_read_connector.Connector_sharepoint}
 \alias{log_read_connector.Connector_sharepoint}
-\title{Log read operation for Sharepoint connector}
+\title{Log Read Operation for Sharepoint connector}
 \usage{
 \method{log_read_connector}{Connector_sharepoint}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The Connector_sharepoint object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Log read operation for Sharepoint connector
+Implementation of the log_read_connector function for the Connector_sharepoint class.
 }

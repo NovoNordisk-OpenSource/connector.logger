@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_remove_connector.default}
 \alias{log_remove_connector.default}
-\title{Default log remove operation}
+\title{Default Log Remove Operation}
 \usage{
 \method{log_remove_connector}{default}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The connector object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Default log remove operation
+Default implementation of the log_remove_connector function.
 }
