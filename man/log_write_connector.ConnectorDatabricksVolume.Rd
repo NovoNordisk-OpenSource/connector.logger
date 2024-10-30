@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_write_connector.ConnectorDatabricksVolume}
 \alias{log_write_connector.ConnectorDatabricksVolume}
-\title{Log write operation for ConnectorDatabricksVolume connector}
+\title{Log Write Operation for ConnectorDatabricksVolume connector}
 \usage{
 \method{log_write_connector}{ConnectorDatabricksVolume}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The ConnectorDatabricksVolume object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Log write operation for ConnectorDatabricksVolume connector
+Implementation of the log_write_connector function for the ConnectorDatabricksVolume class.
 }

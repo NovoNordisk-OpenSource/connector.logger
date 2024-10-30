@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_read_connector.ConnectorDatabricksVolume}
 \alias{log_read_connector.ConnectorDatabricksVolume}
-\title{Log read operation for ConnectorDatabricksVolume connector}
+\title{Log Read Operation for ConnectorDatabricksVolume connector}
 \usage{
 \method{log_read_connector}{ConnectorDatabricksVolume}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The ConnectorDatabricksVolume object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Log read operation for ConnectorDatabricksVolume connector
+Implementation of the log_read_connector function for the ConnectorDatabricksVolume class.
 }

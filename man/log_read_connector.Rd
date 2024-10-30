@@ -2,10 +2,22 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_read_connector}
 \alias{log_read_connector}
-\title{Log read operation for a connector}
+\title{Log Read Connector}
 \usage{
 log_read_connector(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The connector object to log the reading of.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters passed to the specific method implementation.}
+}
+\value{
+The result of the specific method implementation.
+}
 \description{
-Log read operation for a connector
+This function is a generic for logging the reading of a connector object. The
+actual implementation of the logging is determined by the specific method for
+the connector object's class.
 }

@@ -2,10 +2,20 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{remove_cnt.connector_logger}
 \alias{remove_cnt.connector_logger}
-\title{Log remove operation for connector_logger class}
+\title{Log Remove Operation for connector_logger class}
 \usage{
 \method{remove_cnt}{connector_logger}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The connector_logger object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
+\value{
+The result of the remove operation.
+}
 \description{
-Log remove operation for connector_logger class
+Implementation of the log_remove_connector function for the connector_logger class.
 }

@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_write_connector.default}
 \alias{log_write_connector.default}
-\title{Default log write operation}
+\title{Default Log Write Operation}
 \usage{
 \method{log_write_connector}{default}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The connector object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Default log write operation
+Default implementation of the log_write_connector function.
 }

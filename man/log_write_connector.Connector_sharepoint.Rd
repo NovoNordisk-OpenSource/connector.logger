@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_write_connector.Connector_sharepoint}
 \alias{log_write_connector.Connector_sharepoint}
-\title{Log write operation for Sharepoint connector}
+\title{Log Write Operation for Sharepoint connector}
 \usage{
 \method{log_write_connector}{Connector_sharepoint}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The Connector_sharepoint object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Log write operation for Sharepoint connector
+Implementation of the log_write_connector function for the Connector_sharepoint class.
 }

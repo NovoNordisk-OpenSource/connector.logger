@@ -2,10 +2,17 @@
 % Please edit documentation in R/cnt_logger_generics.R
 \name{log_remove_connector.connector_databricks_dbi}
 \alias{log_remove_connector.connector_databricks_dbi}
-\title{Log remove operation for Databricks dbi connector}
+\title{Log Remove Operation for Databricks dbi connector}
 \usage{
 \method{log_remove_connector}{connector_databricks_dbi}(connector_object, name, ...)
 }
+\arguments{
+\item{connector_object}{The connector_databricks_dbi object.}
+
+\item{name}{The name of the connector.}
+
+\item{...}{Additional parameters.}
+}
 \description{
-Log remove operation for Databricks dbi connector
+Implementation of the log_remove_connector function for the connector_databricks_dbi class.
 }

@@ -1,22 +1,50 @@
+#' connector_logger R6 Class
+#'
+#' An R6 class that inherits from the `connector` class and provides custom logging
+#' implementations for the `log_read_connector()`, `log_write_connector()`, and
+#' `log_remove_connector()` generic functions.
+#'
 #' @export
 connector_logger <- R6::R6Class("connector_logger", inherit = connector)
 
-#' @title Log read operation for a connector
-#' @description Log read operation for a connector
+#' Log Read Connector
+#'
+#' This function is a generic for logging the reading of a connector object. The
+#' actual implementation of the logging is determined by the specific method for
+#' the connector object's class.
+#'
+#' @param connector_object The connector object to log the reading of.
+#' @param name The name of the connector.
+#' @param ... Additional parameters passed to the specific method implementation.
+#'
+#' @return The result of the specific method implementation.
 #' @export
 log_read_connector <- function(connector_object, name, ...) {
   UseMethod("log_read_connector")
 }
 
-#' @title Default log read operation
-#' @description Default log read operation
+#' Default Log Read Operation
+#'
+#' Default implementation of the log_read_connector function.
+#'
+#' @param connector_object The connector object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_read_connector.default <- function(connector_object, name, ...) {
   whirl::log_read(name)
 }
 
-#' @title Log read operation for connector_logger class
-#' @description Log read operation for connector_logger class
+#' Log Read Operation for connector_logger class
+#'
+#' Implementation of the log_read_connector function for the connector_logger class.
+#'
+#' @param connector_object The connector_logger object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
+#' @return The result of the read operation.
 #' @export
 read_cnt.connector_logger <- function(connector_object, name, ...) {
   res <- tryCatch(NextMethod())
@@ -24,22 +52,45 @@ read_cnt.connector_logger <- function(connector_object, name, ...) {
   return(res)
 }
 
-#' @title Log write operation for a connector
-#' @description Log write operation for a connector
+#' Log Write Connector
+#'
+#' This function is a generic for logging the writing of a connector object. The
+#' actual implementation of the logging is determined by the specific method for
+#' the connector object's class.
+#'
+#' @param connector_object The connector object to log the writing of.
+#' @param name The name of the connector.
+#' @param ... Additional parameters passed to the specific method implementation.
+#'
+#' @return The result of the specific method implementation.
 #' @export
 log_write_connector <- function(connector_object, name, ...) {
   UseMethod("log_write_connector")
 }
 
-#' @title Default log write operation
-#' @description Default log write operation
+#' Default Log Write Operation
+#'
+#' Default implementation of the log_write_connector function.
+#'
+#' @param connector_object The connector object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_write_connector.default <- function(connector_object, name, ...) {
   whirl::log_write(name)
 }
 
-#' @title Log write operation for connector_logger class
-#' @description Log write operation for connector_logger class
+#' Log Write Operation for connector_logger class
+#'
+#' Implementation of the log_write_connector function for the connector_logger class.
+#'
+#' @param connector_object The connector_logger object.
+#' @param x The data to write.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
+#' @return Invisible result of the write operation.
 #' @export
 write_cnt.connector_logger <- function(connector_object, x, name, ...) {
   res <- tryCatch(NextMethod())
@@ -47,22 +98,44 @@ write_cnt.connector_logger <- function(connector_object, x, name, ...) {
   return(invisible(res))
 }
 
-#' @title Log remove operation for a connector
-#' @description Log remove operation for a connector
+#' Log Remove Connector
+#'
+#' This function is a generic for logging the removal of a connector object. The
+#' actual implementation of the logging is determined by the specific method for
+#' the connector object's class.
+#'
+#' @param connector_object The connector object to log the removal of.
+#' @param name The name of the connector.
+#' @param ... Additional parameters passed to the specific method implementation.
+#'
+#' @return The result of the specific method implementation.
 #' @export
 log_remove_connector <- function(connector_object, name, ...) {
   UseMethod("log_remove_connector")
 }
 
-#' @title Default log remove operation
-#' @description Default log remove operation
+#' Default Log Remove Operation
+#'
+#' Default implementation of the log_remove_connector function.
+#'
+#' @param connector_object The connector object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_remove_connector.default <- function(connector_object, name, ...) {
   whirl::log_delete(name)
 }
 
-#' @title Log remove operation for connector_logger class
-#' @description Log remove operation for connector_logger class
+#' Log Remove Operation for connector_logger class
+#'
+#' Implementation of the log_remove_connector function for the connector_logger class.
+#'
+#' @param connector_object The connector_logger object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
+#' @return The result of the remove operation.
 #' @export
 remove_cnt.connector_logger <- function(connector_object, name, ...) {
   res <- tryCatch(NextMethod())
@@ -70,56 +143,98 @@ remove_cnt.connector_logger <- function(connector_object, name, ...) {
   return(res)
 }
 
-#' @title Log read operation for FS connector
-#' @description Log read operation for FS connector
+#' Log Read Operation for FS connector
+#'
+#' Implementation of the log_read_connector function for the connector_fs class.
+#'
+#' @param connector_object The connector_fs object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_read_connector.connector_fs <- function(connector_object, name, ...) {
   msg <- paste0("path :", connector_object$path, " , name:", name)
   whirl::log_read(msg)
 }
 
-#' @title Log write operation for FS connector
-#' @description Log write operation for FS connector
+#' Log Write Operation for FS connector
+#'
+#' Implementation of the log_write_connector function for the connector_fs class.
+#'
+#' @param connector_object The connector_fs object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_write_connector.connector_fs <- function(connector_object, name, ...) {
   msg <- paste0("path :", connector_object$path, " , name:", name)
   whirl::log_write(msg)
 }
 
-#' @title Log remove operation for FS connector
-#' @description Log remove operation for FS connector
+#' Log Remove Operation for FS connector
+#'
+#' Implementation of the log_remove_connector function for the connector_fs class.
+#'
+#' @param connector_object The connector_fs object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_remove_connector.connector_fs <- function(connector_object, name, ...) {
   msg <- paste0("path :", connector_object$path, " , name:", name)
   whirl::log_delete(msg)
 }
 
-#' @title Log read operation for Sharepoint connector
-#' @description Log read operation for Sharepoint connector
+#' Log Read Operation for Sharepoint connector
+#'
+#' Implementation of the log_read_connector function for the Connector_sharepoint class.
+#'
+#' @param connector_object The Connector_sharepoint object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_read_connector.Connector_sharepoint <- function(connector_object, name, ...) {
   msg <- paste0("url :", connector_object$site_url, " , name:", name)
   whirl::log_read(msg)
 }
 
-#' @title Log write operation for Sharepoint connector
-#' @description Log write operation for Sharepoint connector
+#' Log Write Operation for Sharepoint connector
+#'
+#' Implementation of the log_write_connector function for the Connector_sharepoint class.
+#'
+#' @param connector_object The Connector_sharepoint object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_write_connector.Connector_sharepoint <- function(connector_object, name, ...) {
   msg <- paste0("url :", connector_object$site_url, " , name:", name)
   whirl::log_write(msg)
 }
 
-#' @title Log remove operation for Sharepoint connector
-#' @description Log remove operation for Sharepoint connector
+#' Log Remove Operation for Sharepoint connector
+#'
+#' Implementation of the log_remove_connector function for the Connector_sharepoint class.
+#'
+#' @param connector_object The Connector_sharepoint object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_remove_connector.Connector_sharepoint <- function(connector_object, name, ...) {
   msg <- paste0("url :", connector_object$site_url, " , name:", name)
   whirl::log_delete(msg)
 }
 
-#' @title Log read operation for Databricks dbi connector
-#' @description Log read operation for Databricks dbi connector
+#' Log Read Operation for Databricks dbi connector
+#'
+#' Implementation of the log_read_connector function for the connector_databricks_dbi class.
+#'
+#' @param connector_object The connector_databricks_dbi object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @importFrom methods show
 #' @export
 log_read_connector.connector_databricks_dbi <- function(connector_object, name, ...) {
@@ -127,8 +242,14 @@ log_read_connector.connector_databricks_dbi <- function(connector_object, name, 
   whirl::log_read(msg)
 }
 
-#' @title Log write operation for Databricks dbi connector
-#' @description Log write operation for Databricks dbi connector
+#' Log Write Operation for Databricks dbi connector
+#'
+#' Implementation of the log_write_connector function for the connector_databricks_dbi class.
+#'
+#' @param connector_object The connector_databricks_dbi object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @importFrom methods show
 #' @export
 log_write_connector.connector_databricks_dbi <- function(connector_object, name, ...) {
@@ -136,8 +257,14 @@ log_write_connector.connector_databricks_dbi <- function(connector_object, name,
   whirl::log_write(msg)
 }
 
-#' @title Log remove operation for Databricks dbi connector
-#' @description Log remove operation for Databricks dbi connector
+#' Log Remove Operation for Databricks dbi connector
+#'
+#' Implementation of the log_remove_connector function for the connector_databricks_dbi class.
+#'
+#' @param connector_object The connector_databricks_dbi object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @importFrom methods show
 #' @export
 log_remove_connector.connector_databricks_dbi <- function(connector_object, name, ...) {
@@ -145,52 +272,86 @@ log_remove_connector.connector_databricks_dbi <- function(connector_object, name
   whirl::log_delete(msg)
 }
 
-#' @title Log read operation for ConnectorDatabricksVolume connector
-#' @description Log read operation for ConnectorDatabricksVolume connector
+#' Log Read Operation for ConnectorDatabricksVolume connector
+#'
+#' Implementation of the log_read_connector function for the ConnectorDatabricksVolume class.
+#'
+#' @param connector_object The ConnectorDatabricksVolume object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_read_connector.ConnectorDatabricksVolume <- function(connector_object, name, ...) {
   msg <- paste0("full path:" , connector_object$full_path, " , name:", name)
   whirl::log_read(msg)
 }
 
-#' @title Log write operation for ConnectorDatabricksVolume connector
-#' @description Log write operation for ConnectorDatabricksVolume connector
+#' Log Write Operation for ConnectorDatabricksVolume connector
+#'
+#' Implementation of the log_write_connector function for the ConnectorDatabricksVolume class.
+#'
+#' @param connector_object The ConnectorDatabricksVolume object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_write_connector.ConnectorDatabricksVolume <- function(connector_object, name, ...) {
   msg <- paste0("full path:" , connector_object$full_path, " , name:", name)
   whirl::log_write(msg)
 }
 
-#' @title Log remove operation for ConnectorDatabricksVolume connector
-#' @description Log remove operation for ConnectorDatabricksVolume connector
+#' Log Remove Operation for ConnectorDatabricksVolume connector
+#'
+#' Implementation of the log_remove_connector function for the ConnectorDatabricksVolume class.
+#'
+#' @param connector_object The ConnectorDatabricksVolume object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_remove_connector.ConnectorDatabricksVolume <- function(connector_object, name, ...) {
   msg <- paste0("full path:" , connector_object$full_path, " , name:", name)
   whirl::log_delete(msg)
 }
 
-#' @title Log read operation for connector dbi
-#' @description Log read operation for connector dbi
+#' Log Read Operation for connector dbi
+#'
+#' Implementation of the log_read_connector function for the connector_dbi class.
+#'
+#' @param connector_object The connector_dbi object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_read_connector.connector_dbi <- function(connector_object, name, ...) {
   msg <- paste0("dbname :", connector_object$conn@dbname, " , name:", name)
   whirl::log_read(msg)
 }
 
-#' @title Log write operation for connector dbi
-#' @description Log write operation for connector dbi
+#' Log Write Operation for connector dbi
+#'
+#' Implementation of the log_write_connector function for the connector_dbi class.
+#'
+#' @param connector_object The connector_dbi object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_write_connector.connector_dbi <- function(connector_object, name, ...) {
   msg <- paste0("dbname :", connector_object$conn@dbname, " , name:", name)
   whirl::log_write(msg)
 }
 
-#' @title Log remove operation for connector dbi
-#' @description Log remove operation for connector dbi
+#' Log Remove Operation for connector dbi
+#'
+#' Implementation of the log_remove_connector function for the connector_dbi class.
+#'
+#' @param connector_object The connector_dbi object.
+#' @param name The name of the connector.
+#' @param ... Additional parameters.
+#'
 #' @export
 log_remove_connector.connector_dbi <- function(connector_object, name, ...) {
   msg <- paste0("dbname :", connector_object$conn@dbname, " , name:", name)
   whirl::log_delete(msg)
 }
-
-
