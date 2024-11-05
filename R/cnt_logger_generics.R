@@ -1,4 +1,20 @@
-# initialize of connector.logger class for documentation
+#' Create a New Connector Logger
+#'
+#' @title Create a New Connector Logger
+#' @description Creates a new empty connector logger object of class "connector_logger".
+#' This is an S3 class constructor that initializes a logging structure for connector operations.
+#'
+#' @return An S3 object of class "connector_logger" containing:
+#'   \itemize{
+#'     \item An empty list
+#'     \item Class attribute set to "connector_logger"
+#'   }
+#'
+#' @examples
+#' logger <- connector_logger
+#' class(logger)  # Returns "connector_logger"
+#' str(logger)    # Shows empty list with class attribute
+#'
 #' @export
 connector_logger <- structure(list(), class = "connector_logger")
 
@@ -135,6 +151,35 @@ log_remove_connector.default <- function(connector_object, name, ...) {
 remove_cnt.connector_logger <- function(connector_object, name, ...) {
   res <- tryCatch(NextMethod())
   log_remove_connector(connector_object, name, ...)
-  return(res)
+  return(invisible(res))
 }
 
+#' List contents
+#'
+#' This function is a generic for logging the List contents of a connector object. The
+#' actual implementation of the logging is determined by the specific method for
+#' the connector object's class.
+#'
+#' @param connector_object The connector object to log the List contents of.
+#' @param ... Additional parameters passed to the specific method implementation.
+#'
+#' @return The result of the specific method implementation.
+#' @export
+log_list_content_connector <- function(connector_object, ...) {
+  UseMethod("log_list_content_connector")
+}
+
+#' List contents Operation for connector_logger class
+#'
+#' Implementation of the log_read_connector function for the connector_logger class.
+#'
+#' @param connector_object The connector_logger object.
+#' @param ... Additional parameters.
+#'
+#' @return The result of the read operation.
+#' @export
+list_content_cnt.connector_logger <- function(connector_object, ...) {
+  res <- tryCatch(NextMethod())
+  log_read_connector(connector_object, name = ".", ...)
+  return(res)
+}

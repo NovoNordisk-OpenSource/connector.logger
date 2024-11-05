@@ -8,7 +8,7 @@
 #'
 #' @export
 log_read_connector.connector_dbi <- function(connector_object, name, ...) {
-  msg <- paste0("driver :", class(connector_object$conn)[1],"dbname :", connector_object$conn@dbname, " , name:", name)
+  msg <- paste0("driver :", class(connector_object$conn)[1], "dbname :", connector_object$conn@dbname, " , name:", name)
   whirl::log_read(msg)
 }
 
@@ -22,7 +22,7 @@ log_read_connector.connector_dbi <- function(connector_object, name, ...) {
 #'
 #' @export
 log_write_connector.connector_dbi <- function(connector_object, name, ...) {
-  msg <- paste0("driver :", class(connector_object$conn)[1],"dbname :", connector_object$conn@dbname, " , name:", name)
+  msg <- paste0("driver :", class(connector_object$conn)[1], "dbname :", connector_object$conn@dbname, " , name:", name)
   whirl::log_write(msg)
 }
 
@@ -36,6 +36,6 @@ log_write_connector.connector_dbi <- function(connector_object, name, ...) {
 #'
 #' @export
 log_remove_connector.connector_dbi <- function(connector_object, name, ...) {
-  msg <- paste0("driver :", class(connector_object$conn)[1],"dbname :", connector_object$conn@dbname, " , name:", name)
+  msg <- paste0("driver :", class(connector_object$conn)[1], "dbname :", connector_object$conn@dbname, " , name:", name)
   whirl::log_delete(msg)
 }
