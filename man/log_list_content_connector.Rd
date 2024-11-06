@@ -9,13 +9,13 @@ log_list_content_connector(connector_object, ...)
 \arguments{
 \item{connector_object}{The connector object to log the List contents of.}
 
-\item{...}{Additional parameters passed to the specific method implementation.}
+\item{...}{Additional parameters passed to the specific method implementation}
 }
 \value{
 The result of the specific method implementation.
 }
 \description{
-This function is a generic for logging the List contents of a connector object. The
-actual implementation of the logging is determined by the specific method for
-the connector object's class.
+This function is a generic for logging the List contents of a
+connector object. The actual implementation of the logging is determined by
+the specific method for the connector object's class.
 }

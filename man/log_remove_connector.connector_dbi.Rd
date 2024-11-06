@@ -14,5 +14,6 @@
 \item{...}{Additional parameters.}
 }
 \description{
-Implementation of the log_remove_connector function for the connector_dbi class.
+Implementation of the log_remove_connector function for the
+connector_dbi class.
 }

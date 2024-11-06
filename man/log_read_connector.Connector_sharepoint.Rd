@@ -14,5 +14,6 @@
 \item{...}{Additional parameters.}
 }
 \description{
-Implementation of the log_read_connector function for the Connector_sharepoint class.
+Implementation of the log_read_connector function for the
+Connector_sharepoint class.
 }

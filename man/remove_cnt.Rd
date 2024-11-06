@@ -17,5 +17,6 @@ remove_cnt(connector_object, name, ...)
 \link{invisible} connector_object.
 }
 \description{
-Addition remove methods for databricks connectors implemented for \code{\link[connector:remove_cnt]{connector::remove_cnt()}}:
+Addition remove methods for databricks connectors implemented for
+\code{\link[connector:remove_cnt]{connector::remove_cnt()}}:
 }

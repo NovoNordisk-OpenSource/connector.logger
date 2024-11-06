@@ -14,5 +14,6 @@
 \item{...}{Additional parameters.}
 }
 \description{
-Implementation of the log_write_connector function for the connector_databricks_dbi class.
+Implementation of the log_write_connector function for the
+connector_databricks_dbi class.
 }

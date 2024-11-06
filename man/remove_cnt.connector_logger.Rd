@@ -17,5 +17,6 @@
 The result of the remove operation.
 }
 \description{
-Implementation of the log_remove_connector function for the connector_logger class.
+Implementation of the log_remove_connector function for the connector_logger
+class.
 }

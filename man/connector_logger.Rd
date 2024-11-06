@@ -18,16 +18,18 @@ An S3 object of class "connector_logger" containing:
 }
 }
 \description{
-Creates a new empty connector logger object of class "connector_logger".
-This is an S3 class constructor that initializes a logging structure for connector operations.
+Creates a new empty connector logger object of class
+"connector_logger".
+This is an S3 class constructor that initializes a logging structure for
+connector operations.
 }
 \details{
 Create a New Connector Logger
 }
 \examples{
 logger <- connector_logger
-class(logger)  # Returns "connector_logger"
-str(logger)    # Shows empty list with class attribute
+class(logger) # Returns "connector_logger"
+str(logger) # Shows empty list with class attribute
 
 }
 \keyword{datasets}

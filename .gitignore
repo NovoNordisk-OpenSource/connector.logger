@@ -6,3 +6,4 @@
 .quarto
 docs
 dev/
+.pre-commit-config.yaml

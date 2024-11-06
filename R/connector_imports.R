@@ -1,5 +1,6 @@
 #' @description
-#' Addition read methods for databricks connectors implemented for [connector::read_cnt()]:
+#' Addition read methods for databricks connectors implemented for
+#'  [connector::read_cnt()]:
 #' @inherit connector::read_cnt params return title details
 #' @importFrom connector read_cnt
 #' @name read_cnt
@@ -7,7 +8,8 @@
 connector::read_cnt
 
 #' @description
-#' Addition write methods for databricks connectors implemented for [connector::write_cnt()]:
+#' Addition write methods for databricks connectors implemented for
+#' [connector::write_cnt()]:
 #' @inherit connector::write_cnt params return title details
 #' @importFrom connector write_cnt
 #' @name write_cnt
@@ -15,7 +17,8 @@ connector::read_cnt
 connector::write_cnt
 
 #' @description
-#' Addition list content methods for databricks connectors implemented for [connector::list_content_cnt()]:
+#' Addition list content methods for databricks connectors implemented for
+#' [connector::list_content_cnt()]:
 #' @inherit connector::list_content_cnt params return title details
 #' @importFrom connector list_content_cnt
 #' @name list_content_cnt
@@ -23,7 +26,8 @@ connector::write_cnt
 connector::list_content_cnt
 
 #' @description
-#' Addition remove methods for databricks connectors implemented for [connector::remove_cnt()]:
+#' Addition remove methods for databricks connectors implemented for
+#' [connector::remove_cnt()]:
 #' @inherit connector::remove_cnt params return title details
 #' @importFrom connector remove_cnt
 #' @name remove_cnt
@@ -31,7 +35,8 @@ connector::list_content_cnt
 connector::remove_cnt
 
 #' @description
-#' Addition tbl methods for databricks connectors implemented for [connector::tbl_cnt()]:
+#' Addition tbl methods for databricks connectors implemented for
+#' [connector::tbl_cnt()]:
 #' @inherit connector::tbl_cnt params return title details
 #' @importFrom connector tbl_cnt
 #' @name tbl_cnt

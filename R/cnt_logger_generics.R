@@ -1,8 +1,10 @@
 #' Create a New Connector Logger
 #'
 #' @title Create a New Connector Logger
-#' @description Creates a new empty connector logger object of class "connector_logger".
-#' This is an S3 class constructor that initializes a logging structure for connector operations.
+#' @description Creates a new empty connector logger object of class
+#' "connector_logger".
+#' This is an S3 class constructor that initializes a logging structure for
+#' connector operations.
 #'
 #' @return An S3 object of class "connector_logger" containing:
 #'   \itemize{
@@ -12,8 +14,8 @@
 #'
 #' @examples
 #' logger <- connector_logger
-#' class(logger)  # Returns "connector_logger"
-#' str(logger)    # Shows empty list with class attribute
+#' class(logger) # Returns "connector_logger"
+#' str(logger) # Shows empty list with class attribute
 #'
 #' @export
 connector_logger <- structure(list(), class = "connector_logger")
@@ -26,7 +28,7 @@ connector_logger <- structure(list(), class = "connector_logger")
 #'
 #' @param connector_object The connector object to log the reading of.
 #' @param name The name of the connector.
-#' @param ... Additional parameters passed to the specific method implementation.
+#' @param ... Additional parameters passed to the specific method implementation
 #'
 #' @return The result of the specific method implementation.
 #' @export
@@ -49,7 +51,8 @@ log_read_connector.default <- function(connector_object, name, ...) {
 
 #' Log Read Operation for connector_logger class
 #'
-#' Implementation of the log_read_connector function for the connector_logger class.
+#' Implementation of the log_read_connector function for the connector_logger
+#'  class.
 #'
 #' @param connector_object The connector_logger object.
 #' @param name The name of the connector.
@@ -71,7 +74,7 @@ read_cnt.connector_logger <- function(connector_object, name, ...) {
 #'
 #' @param connector_object The connector object to log the writing of.
 #' @param name The name of the connector.
-#' @param ... Additional parameters passed to the specific method implementation.
+#' @param ... Additional parameters passed to the specific method implementation
 #'
 #' @return The result of the specific method implementation.
 #' @export
@@ -94,7 +97,8 @@ log_write_connector.default <- function(connector_object, name, ...) {
 
 #' Log Write Operation for connector_logger class
 #'
-#' Implementation of the log_write_connector function for the connector_logger class.
+#' Implementation of the log_write_connector function for the connector_logger
+#' class.
 #'
 #' @param connector_object The connector_logger object.
 #' @param x The data to write.
@@ -117,7 +121,7 @@ write_cnt.connector_logger <- function(connector_object, x, name, ...) {
 #'
 #' @param connector_object The connector object to log the removal of.
 #' @param name The name of the connector.
-#' @param ... Additional parameters passed to the specific method implementation.
+#' @param ... Additional parameters passed to the specific method implementation
 #'
 #' @return The result of the specific method implementation.
 #' @export
@@ -140,7 +144,8 @@ log_remove_connector.default <- function(connector_object, name, ...) {
 
 #' Log Remove Operation for connector_logger class
 #'
-#' Implementation of the log_remove_connector function for the connector_logger class.
+#' Implementation of the log_remove_connector function for the connector_logger
+#' class.
 #'
 #' @param connector_object The connector_logger object.
 #' @param name The name of the connector.
@@ -156,12 +161,12 @@ remove_cnt.connector_logger <- function(connector_object, name, ...) {
 
 #' List contents
 #'
-#' This function is a generic for logging the List contents of a connector object. The
-#' actual implementation of the logging is determined by the specific method for
-#' the connector object's class.
+#' This function is a generic for logging the List contents of a
+#' connector object. The actual implementation of the logging is determined by
+#' the specific method for the connector object's class.
 #'
 #' @param connector_object The connector object to log the List contents of.
-#' @param ... Additional parameters passed to the specific method implementation.
+#' @param ... Additional parameters passed to the specific method implementation
 #'
 #' @return The result of the specific method implementation.
 #' @export
@@ -171,7 +176,8 @@ log_list_content_connector <- function(connector_object, ...) {
 
 #' List contents Operation for connector_logger class
 #'
-#' Implementation of the log_read_connector function for the connector_logger class.
+#' Implementation of the log_read_connector function for the connector_logger
+#'  class.
 #'
 #' @param connector_object The connector_logger object.
 #' @param ... Additional parameters.

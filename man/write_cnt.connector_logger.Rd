@@ -19,5 +19,6 @@
 Invisible result of the write operation.
 }
 \description{
-Implementation of the log_write_connector function for the connector_logger class.
+Implementation of the log_write_connector function for the connector_logger
+class.
 }

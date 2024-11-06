@@ -14,5 +14,5 @@
 \item{...}{Additional parameters.}
 }
 \description{
-Implementation of the log_read_connector function for the connector_dbi class.
+Implementation of the log_read_connector function for the connector_dbi class
 }

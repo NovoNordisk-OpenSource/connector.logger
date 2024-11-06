@@ -15,5 +15,6 @@ list_content_cnt(connector_object, ...)
 A \link{character} vector of content names
 }
 \description{
-Addition list content methods for databricks connectors implemented for \code{\link[connector:list_content_cnt]{connector::list_content_cnt()}}:
+Addition list content methods for databricks connectors implemented for
+\code{\link[connector:list_content_cnt]{connector::list_content_cnt()}}:
 }

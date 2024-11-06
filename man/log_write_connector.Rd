@@ -11,7 +11,7 @@ log_write_connector(connector_object, name, ...)
 
 \item{name}{The name of the connector.}
 
-\item{...}{Additional parameters passed to the specific method implementation.}
+\item{...}{Additional parameters passed to the specific method implementation}
 }
 \value{
 The result of the specific method implementation.

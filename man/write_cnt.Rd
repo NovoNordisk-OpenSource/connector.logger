@@ -19,5 +19,6 @@ write_cnt(connector_object, x, name, ...)
 \link{invisible} connector_object.
 }
 \description{
-Addition write methods for databricks connectors implemented for \code{\link[connector:write_cnt]{connector::write_cnt()}}:
+Addition write methods for databricks connectors implemented for
+\code{\link[connector:write_cnt]{connector::write_cnt()}}:
 }

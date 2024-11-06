@@ -15,5 +15,6 @@
 The result of the read operation.
 }
 \description{
-Implementation of the log_read_connector function for the connector_logger class.
+Implementation of the log_read_connector function for the connector_logger
+class.
 }
