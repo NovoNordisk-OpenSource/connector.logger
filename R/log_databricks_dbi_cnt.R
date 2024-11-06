@@ -9,7 +9,14 @@
 #' @importFrom methods show
 #' @export
 log_read_connector.connector_databricks_dbi <- function(connector_object, name, ...) {
-  msg <- paste0(show(connector_object$conn), "catalog:", connector_object$catalog, " , schema:", connector_object$schema, " , name:", name)
+  msg <- paste0(name, " @ ",
+                "dbname: ", connector_object$conn@info$dbname,
+                ", dbms.name: ", connector_object$conn@info$dbms.name,
+                ", db.version: ", connector_object$conn@info$db.version,
+                ", drivername: ", connector_object$conn@info$drivername,
+                ", driver.version: ", connector_object$conn@info$driver.version,
+                ", odbcdriver.version: ", connector_object$conn@info$odbcdriver.version,
+                ", catalog:", connector_object$catalog, " , schema:", connector_object$schema)
   whirl::log_read(msg)
 }
 
@@ -24,7 +31,14 @@ log_read_connector.connector_databricks_dbi <- function(connector_object, name, 
 #' @importFrom methods show
 #' @export
 log_write_connector.connector_databricks_dbi <- function(connector_object, name, ...) {
-  msg <- paste0(show(connector_object$conn), "catalog:", connector_object$catalog, " , schema:", connector_object$schema, " , name:", name)
+  msg <- paste0(name, " @ ",
+                "dbname: ", connector_object$conn@info$dbname,
+                ", dbms.name: ", connector_object$conn@info$dbms.name,
+                ", db.version: ", connector_object$conn@info$db.version,
+                ", drivername: ", connector_object$conn@info$drivername,
+                ", driver.version: ", connector_object$conn@info$driver.version,
+                ", odbcdriver.version: ", connector_object$conn@info$odbcdriver.version,
+                ", catalog:", connector_object$catalog, " , schema:", connector_object$schema)
   whirl::log_write(msg)
 }
 
@@ -39,6 +53,13 @@ log_write_connector.connector_databricks_dbi <- function(connector_object, name,
 #' @importFrom methods show
 #' @export
 log_remove_connector.connector_databricks_dbi <- function(connector_object, name, ...) {
-  msg <- paste0(show(connector_object$conn), "catalog:", connector_object$catalog, " , schema:", connector_object$schema, " , name:", name)
+  msg <- paste0(name, " @ ",
+                "dbname: ", connector_object$conn@info$dbname,
+                ", dbms.name: ", connector_object$conn@info$dbms.name,
+                ", db.version: ", connector_object$conn@info$db.version,
+                ", drivername: ", connector_object$conn@info$drivername,
+                ", driver.version: ", connector_object$conn@info$driver.version,
+                ", odbcdriver.version: ", connector_object$conn@info$odbcdriver.version,
+                ", catalog:", connector_object$catalog, " , schema:", connector_object$schema)
   whirl::log_delete(msg)
 }

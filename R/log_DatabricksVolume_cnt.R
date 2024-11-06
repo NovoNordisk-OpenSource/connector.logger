@@ -8,7 +8,7 @@
 #'
 #' @export
 log_read_connector.ConnectorDatabricksVolume <- function(connector_object, name, ...) {
-  msg <- paste0("full path:", connector_object$full_path, " , name:", name)
+  msg <- paste0(name, " @ ", connector_object$full_path)
   whirl::log_read(msg)
 }
 
@@ -22,7 +22,7 @@ log_read_connector.ConnectorDatabricksVolume <- function(connector_object, name,
 #'
 #' @export
 log_write_connector.ConnectorDatabricksVolume <- function(connector_object, name, ...) {
-  msg <- paste0("full path:", connector_object$full_path, " , name:", name)
+  msg <- paste0(name, " @ ", connector_object$full_path)
   whirl::log_write(msg)
 }
 
@@ -36,6 +36,6 @@ log_write_connector.ConnectorDatabricksVolume <- function(connector_object, name
 #'
 #' @export
 log_remove_connector.ConnectorDatabricksVolume <- function(connector_object, name, ...) {
-  msg <- paste0("full path:", connector_object$full_path, " , name:", name)
+  msg <- paste0(name, " @ ", connector_object$full_path)
   whirl::log_delete(msg)
 }

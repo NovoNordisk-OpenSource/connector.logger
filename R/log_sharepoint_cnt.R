@@ -8,7 +8,7 @@
 #'
 #' @export
 log_read_connector.Connector_sharepoint <- function(connector_object, name, ...) {
-  msg <- paste0("url :", connector_object$site_url, " , name:", name)
+  msg <- paste0(name, " @ ", connector_object$site_url)
   whirl::log_read(msg)
 }
 
@@ -22,7 +22,7 @@ log_read_connector.Connector_sharepoint <- function(connector_object, name, ...)
 #'
 #' @export
 log_write_connector.Connector_sharepoint <- function(connector_object, name, ...) {
-  msg <- paste0("url :", connector_object$site_url, " , name:", name)
+  msg <- paste0(name, " @ ", connector_object$site_url)
   whirl::log_write(msg)
 }
 
@@ -36,6 +36,6 @@ log_write_connector.Connector_sharepoint <- function(connector_object, name, ...
 #'
 #' @export
 log_remove_connector.Connector_sharepoint <- function(connector_object, name, ...) {
-  msg <- paste0("url :", connector_object$site_url, " , name:", name)
+  msg <- paste0(name, " @ ", connector_object$site_url)
   whirl::log_delete(msg)
 }
