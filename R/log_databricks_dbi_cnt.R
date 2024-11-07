@@ -28,7 +28,7 @@ log_read_connector.connector_databricks_dbi <-
       connector_object$conn@info$odbcdriver.version,
       ", catalog:",
       connector_object$catalog,
-      " , schema:",
+      ", schema:",
       connector_object$schema
     )
     whirl::log_read(msg)
@@ -64,7 +64,7 @@ log_write_connector.connector_databricks_dbi <-
       connector_object$conn@info$odbcdriver.version,
       ", catalog:",
       connector_object$catalog,
-      " , schema:",
+      ", schema:",
       connector_object$schema
     )
     whirl::log_write(msg)
@@ -100,7 +100,7 @@ log_remove_connector.connector_databricks_dbi <-
       connector_object$conn@info$odbcdriver.version,
       ", catalog:",
       connector_object$catalog,
-      " , schema:",
+      ", schema:",
       connector_object$schema
     )
     whirl::log_delete(msg)
