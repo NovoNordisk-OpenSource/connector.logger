@@ -9,6 +9,7 @@ License: MIT + file LICENSE
 Suggests: 
     connector.databricks,
     connector.sharepoint,
+    whirl,
     glue,
     mockery,
     RSQLite,
@@ -22,5 +23,9 @@ BugReports: https://github.com/NN-OpenSource/connector.logger/issues
 Imports: 
     connector,
     lifecycle,
-    methods,
-    whirl
+    methods
+Remotes: 
+    github::NN-OpenSource/connector
+    github::NN-OpenSource/connector.sharepoint
+    github::NN-OpenSource/connector.databricks      
+    github::NovoNordisk-OpenSource/whirl 
