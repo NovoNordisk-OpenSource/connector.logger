@@ -1,12 +1,10 @@
 on:
   push:
     branches:
-      - main
-      - master
+      - "**"
   pull_request:
     branches:
-      - main
-      - master
+      - "**"
 name: All actions
 jobs:
   check-current-version:
