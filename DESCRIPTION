@@ -1,10 +1,16 @@
 Package: connector.logger
 Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Version: 0.0.1
+Authors@R: c(
+    person("Aksel", "Thomsen", , "oath@novonordisk.com", role = c("aut", "cre")),
+    person("Lovemore", "Gakava", , "lvgk@novonordisk.com", role = "aut"),
+    person("Cervan", "Girard", , "cgid@novonordisk.com", role = "aut"),
+    person("Kristian", "Troejelsgaard", , "ktqn@novonordisk.com", role = "aut"),
+    person("Steffen Falgreen", "Larsen", , "sffl@novonordisk.com", role = "aut"),
+    person("Vladimir", "Obucina", , email = "vlob@novonordisk.com", role = "aut"),
+    person("Novo Nordisk A/S", role = "cph")
+  )
+Description: The goal of connector.logger is to implement the log function(s) from whirl to log read, write, and delete operations.
 License: MIT + file LICENSE
 Suggests: 
     glue,
@@ -25,7 +31,7 @@ Imports:
     lifecycle,
     methods
 Remotes: 
-    github::NN-OpenSource/connector
-    github::NN-OpenSource/connector.sharepoint
-    github::NN-OpenSource/connector.databricks      
-    github::NovoNordisk-OpenSource/whirl 
+    github::https://github.com/NN-OpenSource/connector
+    github::https://github.com/NN-OpenSource/connector.sharepoint
+    github::https://github.com/NN-OpenSource/connector.databricks      
+    github::https://github.com/NovoNordisk-OpenSource/whirl
