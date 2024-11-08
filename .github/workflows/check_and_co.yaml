@@ -11,10 +11,10 @@ name: All actions
 jobs:
   check-current-version:
     name: Check current version
-    secrets:
-      GITHUB_PAT: ${{ secrets.ACTIONS_PAT }}
     uses: >-
       NovoNordisk-OpenSource/r.workflows/.github/workflows/check_current_version.yaml@main
+    secrets:
+      GITHUB_PAT: ${{ secrets.ACTIONS_PAT }}
   check-nn-version:
     name: Check NN version
     uses: >-
