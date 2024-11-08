@@ -8,11 +8,11 @@ on:
       - main
       - master
 name: All actions
-env:
-  GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
 jobs:
   check-current-version:
     name: Check current version
+    env:
+      GITHUB_PAT: ${{ secrets.ACTIONS_PAT }}
     uses: >-
       NovoNordisk-OpenSource/r.workflows/.github/workflows/check_current_version.yaml@main
   check-nn-version:
