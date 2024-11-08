@@ -38,7 +38,7 @@ jobs:
     secrets: inherit
   megalinter:
     name: Megalinter
-    uses: NovoNordisk-OpenSource/r.workflows/.github/workflows/megalinter.yaml@main# File to run actions
+    uses: NovoNordisk-OpenSource/r.workflows/.github/workflows/megalinter.yaml@main
     with:
       use_local_setup_action: true
     secrets: inherit
