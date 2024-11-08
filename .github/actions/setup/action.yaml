@@ -1,11 +1,15 @@
 name: Use secret PAT
 description: Saves secrets.ACTIONS_PAT as env.GITHUB_PAT
+inputs:
+  PAT:
+    description: PAT for GitHub
+    default: '${{ secrets.ACTIONS_PAT }}'
 runs:
   using: "composite"
   steps:
     - name: Use ACTION_PAT
       env:
-        SUPER_SECRET: ${{ secrets.ACTION_PAT }}
+        SUPER_SECRET: ${{ inputs.PAT }}
       shell: bash
       run: |
         echo "GITHUB_PAT=$SUPER_SECRET" >> "$GITHUB_ENV"
