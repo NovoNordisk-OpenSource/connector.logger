@@ -8,6 +8,8 @@ on:
       - main
       - master
 name: All actions
+env:
+  GITHUB_PAT: ${{ secrets.ACTIONS_PAT }}
 jobs:
   check-current-version:
     name: Check current version
