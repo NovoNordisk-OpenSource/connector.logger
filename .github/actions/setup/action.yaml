@@ -6,4 +6,4 @@ runs:
     - name: Use ACTION_PAT
       shell: bash
       run: |
-        echo "GITHUB_PAT=$ACTIONS_PAT" >> "$GITHUB_ENV"
+        echo "GITHUB_PAT=${{ secrets.ACTION_PAT }}" >> "$GITHUB_ENV"
