@@ -4,6 +4,8 @@ runs:
   using: "composite"
   steps:
     - name: Use ACTION_PAT
+      env:
+        SUPER_SECRET: ${{ secrets.ACTION_PAT }}
       shell: bash
       run: |
-        echo "GITHUB_PAT=${{ secrets.ACTION_PAT }}" >> "$GITHUB_ENV"
+        echo "GITHUB_PAT=$SUPER_SECRET" >> "$GITHUB_ENV"
