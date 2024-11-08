@@ -1,9 +1,9 @@
 name: Use secret PAT
-description: Saves secrets.ACTIONS_PAT as env.GITHUB_TOKEN
+description: Saves secrets.ACTIONS_PAT as env.GITHUB_PAT
 runs:
   using: "composite"
   steps:
     - name: Use ACTION_PAT
       shell: bash
       run: |
-        echo "GITHUB_TOKEN=$ACTIONS_PAT" >> "$GITHUB_ENV"
+        echo "GITHUB_PAT=$ACTIONS_PAT" >> "$GITHUB_ENV"
