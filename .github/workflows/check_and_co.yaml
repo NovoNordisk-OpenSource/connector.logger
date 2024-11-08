@@ -9,7 +9,7 @@ on:
       - master
 name: All actions
 env:
-  GITHUB_PAT: ${{ secrets.ACTIONS_PAT }}
+  GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
 jobs:
   check-current-version:
     name: Check current version
