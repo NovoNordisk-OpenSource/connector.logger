@@ -1,2 +1,8 @@
-name: Specific setup for connector.logger
-description: <add further details>
+name: Use secret PAT
+description: Saves secrets.ACTIONS_PAT as env.GITHUB_TOKEN
+runs:
+  using: "composite"
+  steps:
+    - name: Use ACTION_PAT
+      run: |
+        echo "GITHUB_TOKEN=$secrets.ACTIONS_PAT" >> "$GITHUB_ENV"
