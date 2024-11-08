@@ -12,10 +12,12 @@ name: All actions
 jobs:
   check-current-version:
     name: Check current version
+    env:
+      GITHUB_PAT: ${{ secrets.access-token || secrets.ACTION_PAT || secrets.GITHUB_TOKEN}}
     uses: >-
       NovoNordisk-OpenSource/r.workflows/.github/workflows/check_current_version.yaml@main
     with:
-      use_local_setup_action: true
+      use_local_setup_action: false
     secrets: inherit
   check-nn-version:
     name: Check NN version
