@@ -3,6 +3,9 @@ full_path_env_var <- "DATABRICKS_VOLUME"
 
 get_full_path <- Sys.getenv(full_path_env_var)
 if (get_full_path != "") {
+  # Skip tests if the connector.databricks package is not installed
+  skip_if_not_installed("connector.databricks")
+
   # Create a mock ConnectorDatabricksVolume object with a temporary folder path
   db_vol_connector <- connector.databricks::ConnectorDatabricksVolume$new(
     full_path = get_full_path, extra_class = "connector_logger"

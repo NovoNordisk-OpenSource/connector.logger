@@ -5,6 +5,7 @@ fs_connector <- connector::connector_fs$new(
 )
 
 test_that("log_read_connector.connector_fs logs correct message", {
+  skip_if_not_installed("connector")
   # Create mock for whirl::log_read
   log_mock <- mockery::mock()
   mockery::stub(log_read_connector.connector_fs, "whirl::log_read", log_mock)
@@ -19,6 +20,7 @@ test_that("log_read_connector.connector_fs logs correct message", {
 })
 
 test_that("log_write_connector.connector_fs logs correct message", {
+  skip_if_not_installed("connector")
   # Create mock for whirl::log_write
   log_mock <- mockery::mock()
   mockery::stub(log_write_connector.connector_fs, "whirl::log_write", log_mock)
@@ -33,6 +35,7 @@ test_that("log_write_connector.connector_fs logs correct message", {
 })
 
 test_that("log_remove_connector.connector_fs logs correct message", {
+  skip_if_not_installed("connector")
   # Create mock for whirl::log_delete
   log_mock <- mockery::mock()
   mockery::stub(
@@ -49,6 +52,7 @@ test_that("log_remove_connector.connector_fs logs correct message", {
 })
 
 test_that("connector_fs logging methods handle spaces in paths", {
+  skip_if_not_installed("connector")
   # Create a mock connector_fs object with path containing spaces
   fs_connector_spaces <- structure(
     list(path = file.path(tempdir(), "path with spaces")),
@@ -67,6 +71,7 @@ test_that("connector_fs logging methods handle spaces in paths", {
 })
 
 test_that("connector_fs logging methods handle edge cases", {
+  skip_if_not_installed("connector")
   # Test with empty path
   fs_connector_empty_path <- structure(
     list(path = ""),

@@ -4,6 +4,8 @@ catalog_local <- Sys.getenv("DATABRICKS_CATALOG_NAME")
 schema_local <- Sys.getenv("DATABRICKS_SCHEMA_NAME")
 
 if (http_path_local != "" && catalog_local != "" && schema_local != "") {
+  skip_if_not_installed("connector.databricks")
+
   # Create a mock connector_databricks_dbi object with a temporary folder path
   dbi_connector <- connector.databricks::connector_databricks_dbi$new(
     http_path = http_path_local,
@@ -15,6 +17,8 @@ if (http_path_local != "" && catalog_local != "" && schema_local != "") {
   test_that(
     "log_read_connector.connector_databricks_dbi logs correct message",
     {
+      skip_if_not_installed("connector.databricks")
+
       # Create mock for whirl::log_read
       log_mock <- mockery::mock()
       mockery::stub(
@@ -45,6 +49,8 @@ if (http_path_local != "" && catalog_local != "" && schema_local != "") {
   test_that(
     "log_write_connector.connector_databricks_dbi logs correct message",
     {
+      skip_if_not_installed("connector.databricks")
+
       # Create mock for whirl::log_write
       log_mock <- mockery::mock()
       mockery::stub(
@@ -76,6 +82,7 @@ if (http_path_local != "" && catalog_local != "" && schema_local != "") {
   test_that(
     "log_remove_connector.connector_databricks_dbi logs correct message",
     {
+      skip_if_not_installed("connector.databricks")
       # Create mock for whirl::log_delete
       log_mock <- mockery::mock()
       mockery::stub(

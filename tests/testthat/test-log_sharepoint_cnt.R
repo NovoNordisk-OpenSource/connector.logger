@@ -3,6 +3,7 @@ url_var <- "SHAREPOINT_SITE_URL"
 
 get_url_var <- Sys.getenv(url_var)
 if (get_url_var != "") {
+  skip_if_not_installed("connector.sharepoint")
   # Create a mock Connector_sharepoint object with a temporary folder path
   sharepoint_connector <- connector.sharepoint::connector_sharepoint(
     get_url_var,
@@ -33,6 +34,7 @@ if (get_url_var != "") {
   test_that(
     "log_write_connector.Connector_sharepoint logs correct message",
     {
+      skip_if_not_installed("connector.sharepoint")
       # Create mock for whirl::log_write
       log_mock <- mockery::mock()
       mockery::stub(
@@ -54,6 +56,7 @@ if (get_url_var != "") {
   test_that(
     "log_remove_connector.Connector_sharepoint logs correct message",
     {
+      skip_if_not_installed("connector.sharepoint")
       # Create mock for whirl::log_delete
       log_mock <- mockery::mock()
       mockery::stub(

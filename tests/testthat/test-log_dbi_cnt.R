@@ -1,4 +1,5 @@
 test_that("log_read_connector.connector_dbi logs correct message", {
+  skip_if_not_installed("connector")
   # Create a mock connector_dbi object
   connector_object <- connector::connector_dbi$new(RSQLite::SQLite(),
     extra_class = "connector_logger"
@@ -18,6 +19,7 @@ test_that("log_read_connector.connector_dbi logs correct message", {
 })
 
 test_that("log_write_connector.connector_dbi logs correct message", {
+  skip_if_not_installed("connector")
   # Create a mock connector_dbi object
   connector_object <- connector::connector_dbi$new(RSQLite::SQLite(),
     extra_class = "connector_logger"
@@ -37,6 +39,7 @@ test_that("log_write_connector.connector_dbi logs correct message", {
 })
 
 test_that("log_remove_connector.connector_dbi logs correct message", {
+  skip_if_not_installed("connector")
   # Create a mock connector_dbi object
   connector_object <- connector::connector_dbi$new(RSQLite::SQLite(),
     extra_class = "connector_logger"
