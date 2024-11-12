@@ -10,6 +10,10 @@
 #' @export
 log_read_connector.Connector_sharepoint <-
   function(connector_object, name, ...) {
+    if (!requireNamespace("connector.sharepoint", quietly = TRUE)) {
+      stop("connector.sharepoint required: install first?")
+    }
+
     msg <- paste0(name, " @ ", connector_object$site_url)
     whirl::log_read(msg)
   }
@@ -26,6 +30,10 @@ log_read_connector.Connector_sharepoint <-
 #' @export
 log_write_connector.Connector_sharepoint <-
   function(connector_object, name, ...) {
+    if (!requireNamespace("connector.sharepoint", quietly = TRUE)) {
+      stop("connector.sharepoint required: install first?")
+    }
+
     msg <- paste0(name, " @ ", connector_object$site_url)
     whirl::log_write(msg)
   }
@@ -42,6 +50,10 @@ log_write_connector.Connector_sharepoint <-
 #' @export
 log_remove_connector.Connector_sharepoint <-
   function(connector_object, name, ...) {
+    if (!requireNamespace("connector.sharepoint", quietly = TRUE)) {
+      stop("connector.sharepoint required: install first?")
+    }
+
     msg <- paste0(name, " @ ", connector_object$site_url)
     whirl::log_delete(msg)
   }

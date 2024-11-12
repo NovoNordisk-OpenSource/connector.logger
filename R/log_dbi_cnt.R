@@ -8,6 +8,10 @@
 #'
 #' @export
 log_read_connector.connector_dbi <- function(connector_object, name, ...) {
+  if (!requireNamespace("connector", quietly = TRUE)) {
+    stop("connector required: install first?")
+  }
+
   msg <- paste0(
     name,
     " @ ",
@@ -30,6 +34,10 @@ log_read_connector.connector_dbi <- function(connector_object, name, ...) {
 #'
 #' @export
 log_write_connector.connector_dbi <- function(connector_object, name, ...) {
+  if (!requireNamespace("connector", quietly = TRUE)) {
+    stop("connector required: install first?")
+  }
+
   msg <- paste0(
     name,
     " @ ",
@@ -52,6 +60,10 @@ log_write_connector.connector_dbi <- function(connector_object, name, ...) {
 #'
 #' @export
 log_remove_connector.connector_dbi <- function(connector_object, name, ...) {
+  if (!requireNamespace("connector", quietly = TRUE)) {
+    stop("connector required: install first?")
+  }
+
   msg <- paste0(
     name,
     " @ ",

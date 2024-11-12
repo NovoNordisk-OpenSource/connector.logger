@@ -11,6 +11,10 @@
 #' @export
 log_read_connector.connector_databricks_dbi <-
   function(connector_object, name, ...) {
+    if (!requireNamespace("connector.databricks", quietly = TRUE)) {
+      stop("connector.databricks required: install first?")
+    }
+
     msg <- paste0(
       name,
       " @ ",
@@ -47,6 +51,10 @@ log_read_connector.connector_databricks_dbi <-
 #' @export
 log_write_connector.connector_databricks_dbi <-
   function(connector_object, name, ...) {
+    if (!requireNamespace("connector.databricks", quietly = TRUE)) {
+      stop("connector.databricks required: install first?")
+    }
+
     msg <- paste0(
       name,
       " @ ",
@@ -83,6 +91,10 @@ log_write_connector.connector_databricks_dbi <-
 #' @export
 log_remove_connector.connector_databricks_dbi <-
   function(connector_object, name, ...) {
+    if (!requireNamespace("connector.databricks", quietly = TRUE)) {
+      stop("connector.databricks required: install first?")
+    }
+
     msg <- paste0(
       name,
       " @ ",

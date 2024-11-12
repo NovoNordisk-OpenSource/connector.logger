@@ -8,6 +8,10 @@
 #'
 #' @export
 log_read_connector.connector_fs <- function(connector_object, name, ...) {
+  if (!requireNamespace("connector", quietly = TRUE)) {
+    stop("connector required: install first?")
+  }
+
   msg <- paste0(name, " @ ", connector_object$path)
   whirl::log_read(msg)
 }
@@ -23,6 +27,10 @@ log_read_connector.connector_fs <- function(connector_object, name, ...) {
 #'
 #' @export
 log_write_connector.connector_fs <- function(connector_object, name, ...) {
+  if (!requireNamespace("connector", quietly = TRUE)) {
+    stop("connector required: install first?")
+  }
+
   msg <- paste0(name, " @ ", connector_object$path)
   whirl::log_write(msg)
 }
@@ -38,6 +46,10 @@ log_write_connector.connector_fs <- function(connector_object, name, ...) {
 #'
 #' @export
 log_remove_connector.connector_fs <- function(connector_object, name, ...) {
+  if (!requireNamespace("connector", quietly = TRUE)) {
+    stop("connector required: install first?")
+  }
+
   msg <- paste0(name, " @ ", connector_object$path)
   whirl::log_delete(msg)
 }
