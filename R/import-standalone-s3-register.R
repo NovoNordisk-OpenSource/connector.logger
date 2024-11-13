@@ -188,14 +188,5 @@ s3_register <- function(generic, class, method = NULL) {
   stop(sprintf("Internal error in rlang shims: Unknown function `%s()`.", fn))
 }
 
-#' Register S3 methods for logger connector
-#'
-#' This function registers S3 methods for reading, writing, and removing
-#' connectors with the logger connector class.
-#' @export
-cnt_logger_S3_register <- function() {
-  s3_register(generic = "connector::read_cnt", class = "connector_logger")
-  s3_register(generic = "connector::write_cnt", class = "connector_logger")
-  s3_register(generic = "connector::remove_cnt", class = "connector_logger")
-}
+
 # nocov end

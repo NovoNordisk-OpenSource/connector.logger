@@ -190,7 +190,19 @@ list_content_cnt.connector_logger <- function(connector_object, ...) {
   return(res)
 }
 
-
+#' Print Connector Logger
+#'
+#' This function prints the connector logger.
+#'
+#' @param x The connector logger object
+#' @param ... Additional arguments
+#'
+#' @return The result of the print operation
+#'
+#' @export
+print.connector_logger <- function(x, ...) {
+  NextMethod()
+}
 
 #' Register S3 methods for logger connector
 #'
