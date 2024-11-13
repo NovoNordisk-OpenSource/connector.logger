@@ -12,6 +12,8 @@ Databricks
 dbi
 dplyr
 Falgreen
+ffffff
+ffffffversicolor
 fs
 FS
 Gakava
@@ -33,6 +35,7 @@ novonordisk
 Obucina
 OpenSource
 ORCID
+rlang
 Roxygen
 RoxygenNote
 RSQLite
@@ -45,4 +48,6 @@ testthat
 Thomsen
 Troejelsgaard
 vctrs
+versicolor
+virginica
 vlob

@@ -189,3 +189,16 @@ list_content_cnt.connector_logger <- function(connector_object, ...) {
   log_read_connector(connector_object, name = ".", ...)
   return(res)
 }
+
+
+
+#' Register S3 methods for logger connector
+#'
+#' This function registers S3 methods for reading, writing, and removing
+#' connectors with the logger connector class.
+#' @export
+cnt_logger_S3_register <- function() {
+  s3_register(generic = "connector::read_cnt", class = "connector_logger")
+  s3_register(generic = "connector::write_cnt", class = "connector_logger")
+  s3_register(generic = "connector::remove_cnt", class = "connector_logger")
+}
