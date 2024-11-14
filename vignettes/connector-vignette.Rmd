@@ -51,7 +51,6 @@ con$read_cnt()
 
 # Write data
 con$write_cnt()
-
 ```
 
 ## Conclusion

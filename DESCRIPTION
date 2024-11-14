@@ -1,12 +1,23 @@
 Package: connector.logger
 Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Version: 0.0.1
+Authors@R: c(
+    person("Aksel", "Thomsen", , "oath@novonordisk.com", role = c("aut", "cre")),
+    person("Lovemore", "Gakava", , "lvgk@novonordisk.com", role = "aut"),
+    person("Cervan", "Girard", , "cgid@novonordisk.com", role = "aut"),
+    person("Kristian", "Troejelsgaard", , "ktqn@novonordisk.com", role = "aut"),
+    person("Steffen Falgreen", "Larsen", , "sffl@novonordisk.com", role = "aut"),
+    person("Vladimir", "Obucina", , email = "vlob@novonordisk.com", role = "aut"),
+    person("Novo Nordisk A/S", role = "cph")
+  )
+Description: The goal of connector.logger is to implement the log function(s) from whirl to log read, write, and delete operations.
 License: MIT + file LICENSE
 Suggests: 
+    connector.databricks (>= 0.0.2),
+    connector.sharepoint (>= 0.0.3), 
+    glue,
+    mockery,
+    RSQLite,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
@@ -14,6 +25,14 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 URL: https://github.com/NN-OpenSource/connector.logger, https://miniature-couscous-2kqngew.pages.github.io/
 BugReports: https://github.com/NN-OpenSource/connector.logger/issues
-Imports: 
-    connector,
-    lifecycle
+Imports:
+    connector (>= 0.0.3),
+    lifecycle,
+    methods,
+    rlang,
+    whirl (>= 0.1.3)
+Remotes: 
+    NovoNordisk-OpenSource/whirl,
+    NN-OpenSource/connector,
+    NN-OpenSource/connector.sharepoint,
+    NN-OpenSource/connector.databricks
