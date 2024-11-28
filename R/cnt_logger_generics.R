@@ -20,6 +20,7 @@
 #' @export
 connector_logger <- structure(list(), class = "connector_logger")
 
+
 #' Log Read Connector
 #'
 #' This function is a generic for logging the reading of a connector object. The
@@ -212,5 +213,6 @@ print.connector_logger <- function(x, ...) {
 cnt_logger_S3_register <- function() {
   s3_register(generic = "connector::read_cnt", class = "connector_logger")
   s3_register(generic = "connector::write_cnt", class = "connector_logger")
+  s3_register(generic = "base::print", class = "connector_logger")
   s3_register(generic = "connector::remove_cnt", class = "connector_logger")
 }
