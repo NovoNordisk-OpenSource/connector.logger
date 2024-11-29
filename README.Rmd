@@ -18,8 +18,8 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/connector.logger)](https://CRAN.R-project.org/package=connector.logger)
-[![R-CMD-check](https://github.com/NN-OpenSource/connector.logger/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NN-OpenSource/connector.logger/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/NN-OpenSource/connector.logger/graph/badge.svg)](https://app.codecov.io/gh/NN-OpenSource/connector.logger)
+[![R-CMD-check](https://github.com/NovoNordisk-OpenSource/connector.logger/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NovoNordisk-OpenSource/connector.logger/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/NovoNordisk-OpenSource/connector.logger/graph/badge.svg)](https://app.codecov.io/gh/NovoNordisk-OpenSource/connector.logger)
 <!-- badges: end -->
 
 The goal of connector.logger is to implement the log function(s) from whirl to log read, write, and delete operations.
@@ -30,7 +30,7 @@ You can install the development version of connector.logger like so:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("NN-OpenSource/connector.logger")
+remotes::install_github("NovoNordisk-OpenSource/connector.logger")
 ```
 
 ## Example
