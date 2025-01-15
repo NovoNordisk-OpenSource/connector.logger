@@ -13,7 +13,7 @@ Authors@R: c(
 Description: The goal of connector.logger is to implement the log function(s) from whirl to log read, write, and delete operations.
 License: MIT + file LICENSE
 Suggests: 
-    connector.databricks (>= 0.0.2),
+    connector.databricks (>= 0.0.1),
     connector.sharepoint (>= 0.0.3), 
     glue,
     mockery,
