@@ -33,6 +33,6 @@ Imports:
     whirl (>= 0.1.3)
 Remotes: 
     NovoNordisk-OpenSource/whirl,
-    NN-OpenSource/connector,
+    NovoNordisk-OpenSource/connector,
     NN-OpenSource/connector.sharepoint,
     NN-OpenSource/connector.databricks
